@@ -1,0 +1,36 @@
+.btn {
+    display: inline-block;
+    background: rgb(9, 179, 43);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+  }
+  .btn{
+    box-shadow:  2px 4px rgb(126, 175, 135);
+  }
+
+  .btn-size{
+    width: 80%;
+    height: 40px;
+  }
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .btn-block {
+    display: block;
+    width: 100%;
+  }

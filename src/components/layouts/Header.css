@@ -1,0 +1,44 @@
+header {
+    color: white;
+    background-color: rgb(7, 53, 68);
+    display: flex;
+    
+}
+header a {
+    text-decoration: none;
+}
+
+header a img{
+    filter: invert(1);
+    margin-left: 10px;
+}
+
+header a h1{
+    color: white;
+    margin-left: 10px;
+    font-size: 220%; 
+}
+
+
+
+header a h2{
+    color: white;
+    margin-right: 10px;
+    font-size: 100%; 
+}
+
+
+header a:hover,
+header a:active{
+    color: rgb(1, 0, 1);
+    text-decoration: none;
+}
+
+header div.login{
+    flex: 1;
+    margin-right: 0.5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

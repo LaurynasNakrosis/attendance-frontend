@@ -1,0 +1,55 @@
+// Collapsible.scss
+.collapsible {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(68, 123, 140);
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0);
+    width: 40%;
+    flex-direction: column;
+    
+
+    .collapsible__header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      
+  
+      .collapsible__title {
+        flex: 1;
+      }
+  
+      .collapsible__icon {
+        font-size: 18px;
+        margin-left: 10px;
+        
+      }
+    }
+  
+    .collapsible__body {
+      padding: 10px;
+      
+    }
+
+  }
+
+  table.collapsible {
+    width: 50%;
+    margin-bottom: 10px;
+    
+  
+    & tbody > tr > td.left {
+      text-align:center;
+      vertical-align: top;
+
+    }
+  
+    & tbody > tr > td.right {
+      text-align: right;
+      vertical-align: top;
+      font-weight: 400;
+      color: Black;
+    }
+  }

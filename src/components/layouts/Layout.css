@@ -1,0 +1,23 @@
+div#root {
+    background: White;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  div#root div.centerpane {
+    background: WhiteSmoke;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    flex-shrink: 100%;
+  }
+  
+  div#root div.centrepane > main {
+    padding: 30px;
+    width: 100%;
+    flex-shrink: 100%;
+  }
+
+  

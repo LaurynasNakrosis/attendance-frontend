@@ -1,0 +1,84 @@
+form {
+  width: 100%;
+  padding: 10px 0;
+}
+form.BorderedForm {
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid LightGrey;
+  border-radius: 5px;
+}
+form div.FormTray {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+div.FormItem {
+  margin-bottom: 20px;
+}
+div.FormItem label.FormLabel {
+  display: block;
+  font-weight: 600;
+}
+div.FormItem p.FormAdvice {
+  color: #16c7af;
+  font-weight: 400;
+  font-size: 90%;
+}
+div.FormItem select,
+div.FormItem input {
+  width: 10%;
+  padding: 3px;
+  margin: 1px 0;
+  font-size: 100%;
+  border-radius: 0px;
+  border: 1px solid LightGrey;
+  background: White;
+}
+div.FormItem select::-moz-placeholder, div.FormItem input::-moz-placeholder {
+  color: Grey;
+  font-weight: 300;
+}
+div.FormItem select:-ms-input-placeholder, div.FormItem input:-ms-input-placeholder {
+  color: Grey;
+  font-weight: 300;
+}
+div.FormItem select::placeholder, div.FormItem select:disabled,
+div.FormItem input::placeholder,
+div.FormItem input:disabled {
+  color: Grey;
+  font-weight: 300;
+}
+div.FormItem select:hover, div.FormItem select:focus,
+div.FormItem input:hover,
+div.FormItem input:focus {
+  outline-width: 1px;
+  outline-color: red;
+  outline-style: solid;
+  border-width: 1px;
+  border-style: solid;
+}
+div.FormItem select:hover,
+div.FormItem input:hover {
+  border-color: LightGrey;
+  outline-color: LightGrey;
+}
+div.FormItem select:focus,
+div.FormItem input:focus {
+  border-color: #16c7af;
+  outline-color: #16c7af;
+}
+div.FormItem select[type=number],
+div.FormItem input[type=number] {
+  text-align: left;
+}
+div.FormItem select.FormError,
+div.FormItem input.FormError {
+  border-color: #da5c6e;
+  outline-color: #da5c6e;
+}
+div.FormItem p.FormError {
+  color: #da5c6e;
+  font-weight: 400;
+  font-size: 90%;
+}/*# sourceMappingURL=Form.css.map */

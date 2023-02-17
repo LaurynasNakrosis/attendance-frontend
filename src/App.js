@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './components/pages/Home.js';
+import PageNotFound from './components/pages/404.js';
+import SignIn from './components/pages/SignIn.js';
+import Layout from './components/layouts/Layout.js';
 import './App.css';
+import Lectures from './components/pages/Letures';
+
+
+
 
 function App() {
+{ /* const [token, setToken] = useState();
+  if(!token){
+    return <SignINForm1 setToken={setToken} />
+  }*/}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+    <Layout>
+      <Routes>
+        <Route exact path='/' element={<Home />}/>
+        <Route path='/signin' element={<SignIn />}/>
+        <Route path='*' element={<PageNotFound />}/>
+        <Route path='/lectures' element={<Lectures/>}/>
+      </Routes>
+    </Layout>
+    </BrowserRouter>
+    );
 }
 
 export default App;
