@@ -1,0 +1,16 @@
+div.filters{
+    margin: 0px ;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #1C7D9D;
+    border-radius: 5px;
+}
+.header{
+    text-align: center;
+    font-weight: bold;
+}
+.input{
+    width: 100%;
+    border-color:#1C7D9D;
+}

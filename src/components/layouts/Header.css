@@ -35,7 +35,7 @@ header a:active{
 }
 
 header div.login{
-    flex: 1;
+
     margin-right: 0.5rem;
     text-align: right;
     display: flex;

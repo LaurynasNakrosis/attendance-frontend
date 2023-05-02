@@ -1,23 +1,72 @@
+/* Selects the div with the ID "root" */
 div#root {
-    background: White;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-  }
-  
-  div#root div.centerpane {
-    background: WhiteSmoke;
-    width: 100%;
-    max-width: 100%;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    flex-shrink: 100%;
-  }
-  
-  div#root div.centrepane > main {
-    padding: 30px;
-    width: 100%;
-    flex-shrink: 100%;
+  /* Sets the background color to White */
+  background: White;
+
+  /* Sets the minimum height to 100% of the viewport height */
+  min-height: 100vh;
+  /* Sets the display property to flex */
+  display: flex;
+  /* Centers the child elements horizontally */
+  justify-content: center;
+}
+
+/* Selects the div with the class "centerpane" within the div with ID "root" */
+div#root div.centerpane {
+  /* Sets the background color to WhiteSmoke */
+
+  /* Sets the width to 100% */
+  width: 100%;
+  /* Sets the max-width to 100% */
+  max-width: 100%;
+  /* Sets the display property to grid */
+  display: grid;
+  /* Defines the number of rows and their sizes in the grid */
+  grid-template-rows: auto auto 1fr auto;
+  /* Specifies that the element should shrink to its minimum size */
+  flex-shrink: 1;
+}
+
+/* Selects the "main" element within the div with class "centerpane" within the div with ID "root" */
+div#root div.centerpane > main {
+  /* Adds 30px of padding */
+  padding: 30px;
+  /* Sets the width to 100% */
+  width: 100%;
+  /* Specifies that the element should shrink to its minimum size */
+  flex-shrink: 1;
+}
+
+/* Media query for Mobile devices with a maximum screen width of 767px */
+@media (max-width: 767px) {
+  /* Selects the div with the ID "root" */
+  div#root {
+    /* Adds 10px of padding to the left and right */
+    padding: 5px 10px;
+
   }
 
-  
+  /* Selects the div with the class "centerpane" within the div with ID "root" */
+  div#root div.centerpane {
+    /* Changes the number of rows in the grid */
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+/* Media query for Tablet devices with a minimum screen width of 768px and a maximum screen width of 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Selects the div with the class "centerpane" within the div with ID "root" */
+  div#root div.centerpane {
+    /* Sets the width to 80% */
+    width: 60%;
+  }
+}
+
+/* Media query for website devices with a minimum screen width of 992px */
+@media (min-width: 992px) {
+  /* Selects the div with the class "centerpane" within the div with ID "root" */
+  div#root div.centerpane {
+    /* Sets the width to 60% */
+    width: 80%;
+  }
+}

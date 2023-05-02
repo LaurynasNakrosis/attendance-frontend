@@ -8,13 +8,16 @@ function Navbar ()  {
   return (
     <nav>
         <div className="navItem">
-            <NavLink to='./' className={getLinkStyle}>Home</NavLink>
+            <NavLink to='./' className={getLinkStyle}>Student Page</NavLink>
+        </div>
+        <div className="navItem">
+            <NavLink to='./lectures' className={getLinkStyle}>Administrator Page</NavLink>
+        </div>
+        <div className="navItem">
+            <NavLink to='./teacher' className={getLinkStyle}>Teacher Page</NavLink>
         </div>
         <div className="navItem">
             <NavLink to='./signin' className={getLinkStyle}>Sign In</NavLink>
-        </div>
-        <div className="navItem">
-            <NavLink to='./lectures' className={getLinkStyle}>Lectures</NavLink>
         </div>
         {/*<div className="navItem">
             <NavLink to='./signin1' className={getLinkStyle}>Sign In</NavLink>

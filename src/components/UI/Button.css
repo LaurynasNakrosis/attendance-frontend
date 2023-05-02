@@ -1,36 +1,32 @@
 .btn {
-    display: inline-block;
-    background: rgb(9, 179, 43);
+    background: #1C7D9D;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 30px;
+    align-items: center;
+ 
+    border-radius: 10px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 10px;
+    font-size: 15px;
     font-family: inherit;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    
+  
+
+      /* Appearance */
+  padding: 10px;
+  width: 96%;
+margin: 20px;
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   }
   .btn{
-    box-shadow:  2px 4px rgb(126, 175, 135);
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 10px 5px -5px rgba(0,0,0,0.15);
   }
 
-  .btn-size{
-    width: 80%;
-    height: 40px;
-  }
-  .btn:focus {
-    outline: none;
-  }
-  
-  .btn:active {
-    transform: scale(0.98);
-  }
-
-  .btn-block {
-    display: block;
-    width: 100%;
-  }

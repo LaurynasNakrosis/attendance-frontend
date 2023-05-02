@@ -1,0 +1,41 @@
+section.screen{
+    padding: 20px;
+}
+div.Row {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between; 
+    border-radius: 10px;
+
+  
+  }
+  div.item {
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+  div.text{
+    align-items: center;
+    width: 100%;
+    display: flex;
+  justify-content:space-around;
+  }
+  
+  div.item2 {
+    margin: 30px ;
+      padding: 30px;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border: 1px solid #1C7D9D;
+    border-radius: 5px;
+  }
+  div.filterPanel{
+    width: 100%;
+    display: flex;
+  justify-content:space-around;
+    /*border: 1px solid #1C7D9D;*/
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+  }

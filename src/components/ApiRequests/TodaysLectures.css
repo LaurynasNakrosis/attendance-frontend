@@ -1,1 +1,46 @@
+div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between; 
+}
+div.item {
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+div.item2 {
+  padding-top:10px;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+  text{
+    padding: 10%;
+    margin: 10%;
+  }
+  div.radar{
+    justify-content: center;
+    width: 100%;
+    margin: 4px;
+  }
 
+  div.filterPanel{
+    width: 100%;
+    display: flex;
+  }
+  .toggle--button{
+    background-color:  rgb(3, 131, 20);
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 10px 5px -5px rgba(0,0,0,0.15);
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+  }
+  .toggle--close{
+    background-color:#1C7D9D ;
+  }

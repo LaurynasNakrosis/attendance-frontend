@@ -6,7 +6,7 @@ import SignIn from './components/pages/SignIn.js';
 import Layout from './components/layouts/Layout.js';
 import './App.css';
 import Lectures from './components/pages/Letures';
-
+import Teacher from './components/pages/Teacher.js';
 
 
 
@@ -23,6 +23,7 @@ function App() {
         <Route path='/signin' element={<SignIn />}/>
         <Route path='*' element={<PageNotFound />}/>
         <Route path='/lectures' element={<Lectures/>}/>
+        <Route path='/teacher' element={<Teacher/>}/>
       </Routes>
     </Layout>
     </BrowserRouter>

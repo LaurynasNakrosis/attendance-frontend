@@ -1,51 +1,44 @@
 import React from 'react';
-
 import './Form.scss';
 import ToolTipDecorator from '../UI/ToolTipDecorator.js';
-import { ActionAdd, ActionCancel, ActionTray} from '../UI/Actions.js';
+import Action from './Actions';
 import { useState } from 'react';
 
 // Functional component that returns form element. Receives two function call backs. 
 export default function  Form ({children, onSubmit, onCancel}) {
-    // Initialisation -------------
-    // Hooks ----------------------
-    // State ----------------------
-    // Context --------------------
+  
     // Handlers -------------------
     const handleSubmit = () => { 
-      console.log("Form handle")   
+      //console.log("Form handle")   
       onSubmit();
     }
 
     const handleCancel = () => onCancel(); 
     // View -----------------------
   return(
-  <div  className="BorderedForm">
-    <div className='FormTray'>
-      {
-        children
-      }
+    <div className='form'>
+      <div  className="BorderedForm">
+        <div className='FormTray'>
+          {
+            children
+          }
+        </div>
+            <Action.Tray>
+                <ToolTipDecorator message="Submit Record">
+                  <Action.Add showText onClick={handleSubmit} buttonText="Submit"/> 
+                  </ToolTipDecorator>
+                <ToolTipDecorator message="Cancel form">
+                  <Action.Cancel showText onClick={handleCancel} buttonText='Cancel' />   
+                </ToolTipDecorator>
+            </Action.Tray>  
+        </div>
     </div>
-      <ActionTray>
-          <ToolTipDecorator message="Submit Record">
-            <ActionAdd showText onClick={handleSubmit} buttonText="Submit"/> 
-            </ToolTipDecorator>
-          <ToolTipDecorator message="Cancel form">
-            <ActionCancel showText onClick={handleCancel} buttonText='Cancel' />   
-          </ToolTipDecorator>
-      </ActionTray>  
-  </div>
   );
+
 }
 
 
  function Item ({children, label, htmlFor, advice, error}) {
-    // Initialisation -------------
-    // Hooks ----------------------
-    // State ----------------------
-    // Context --------------------
-    // Handlers -------------------
-    // View -----------------------
 
   return (
     <div className="FormItem">
@@ -64,7 +57,6 @@ function useForm (initialRecord,conformance,{isValid,errorMessage},onCancel, onS
   const [errors, setErrors] = useState(
       Object.keys(initialRecord).reduce((accum, key) => ({ ...accum, [key]: null }), {})
       );
-  // Context --------------------
 
   // Handlers -------------------
   const handleChange = (event) => {
@@ -74,23 +66,19 @@ function useForm (initialRecord,conformance,{isValid,errorMessage},onCancel, onS
     setErrors({ ...errors, [name]: isValid[name](newValue) ? null : errorMessage[name]});
     };
 
-    const isValidRecord = (record) => {
-      console.log(" is valid")
-      let isRecordValid = true;
-      Object.keys(record).forEach((key) => {
-          if (isValid[key](record[key])){
-              errors[key] = null;
-          }else{
-              errors[key] = errorMessage[key];
-              isRecordValid = false;
-          }
-      });
-      return isRecordValid; 
+const isValidRecord = (record) => {
+  let isRecordValid = true;
+    Object.keys(isValid).forEach((key) => {
+        if (isValid[key](record[key])){
+            errors[key] = null;
+        }else{
+            errors[key] = errorMessage[key];
+            isRecordValid = false;
+        }
+    });
+  return isRecordValid; 
   }
   const handleSubmit = (event) => {
-    console.log("handleSubmit 2000")
-      //event.preventDefault();
-      console.log("handleSubmit 3000")
       isValidRecord(record) && onSubmit(record) && onCancel();
       setErrors({...errors});
   }

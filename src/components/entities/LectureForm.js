@@ -40,9 +40,9 @@ export default function LectureForm  ({ onCancel, onSubmit, initialRecord=emptyL
     const [lecture, errors, handleChange, handleSubmit] = Form.useForm(initialRecord,conformance,validation,onCancel, onSubmit);
 
     //  Declares multiple variables using destruct and returns values from useLoad
-    const [rooms, , loadingRoomsMessage, ] = useLoad('/room');
-    const [modules, ,loadingModulesMessage,] = useLoad('/modules');
-    const [types, ,loadingTypesMessage,] = useLoad('/types');
+    const [rooms,   ,loadingRoomsMessage,   ] = useLoad('/room');
+    const [modules, ,loadingModulesMessage, ] = useLoad('/modules');
+    const [types,   ,loadingTypesMessage,   ] = useLoad('/classTypes');
 
     // Handlers--------------------------------------
     // View ------------------------------------------
